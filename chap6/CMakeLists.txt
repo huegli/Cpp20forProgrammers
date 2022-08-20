@@ -103,3 +103,10 @@ target_link_libraries(fig06_13 fmt::fmt)
 set_target_properties(fig06_13
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
+
+add_executable(fig06_14
+        "${CMAKE_CURRENT_SOURCE_DIR}/src/fig06_14.cpp")
+target_link_libraries(fig06_14 fmt::fmt)
+set_target_properties(fig06_14
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
