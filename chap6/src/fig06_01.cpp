@@ -1,14 +1,10 @@
-// fig06_01.cpp
 // Initializing an array's elements to zeros and printing the array.
 #include <cstddef>
 #include <iostream>
 #include <iomanip>
 #include <array>
-#include "Config.h"
 
 int main() {
-    std::cout << "Version: " << VERSION_MAJOR << "." << VERSION_MINOR << std::endl;
-    
     std::array<int, 5> values; // values is an array of 5 int values
     
     // initialize elements of array values to 0
