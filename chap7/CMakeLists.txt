@@ -21,7 +21,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
 # Define targets
-set(TLIST 01 02 03 06 10 11 12)
+set(TLIST 01 02 03 06 10 11 12 13 14)
 
 # iterate through all targets
 foreach(T IN ITEMS ${TLIST})
