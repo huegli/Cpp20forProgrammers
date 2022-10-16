@@ -1,5 +1,6 @@
 [requires]
 fmt/8.1.1
+rapidcsv/8.64
 
 [generators]
 cmake
