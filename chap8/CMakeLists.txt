@@ -4,7 +4,7 @@ set(TLIST 01 02 03 04 05 06 07 08 09 10 11 12 13 14)
 if (NOT (${CMAKE_SYSTEM_NAME} STREQUAL "Darwin"))
     list(APPEND TLIST 15)
 endif()
-list(APPEND TLIST 16)
+list(APPEND TLIST 16 17 18)
 
 # iterate through all targets
 foreach(T IN ITEMS ${TLIST})
