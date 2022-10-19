@@ -24,6 +24,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 add_subdirectory(chap6)
 add_subdirectory(chap7)
 add_subdirectory(chap8)
+add_subdirectory(chap9)
 
 add_custom_target (
     copy-compile-commands ALL
