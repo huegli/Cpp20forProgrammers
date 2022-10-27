@@ -3,3 +3,4 @@ bin
 build*
 CMakeLists.txt.user
 compile_commands.json
+**/*.kdev4
