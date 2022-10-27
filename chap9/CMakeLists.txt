@@ -37,10 +37,6 @@ foreach(T IN ITEMS ${TLIST})
             add_executable(${TNAME}
                 "${CMAKE_CURRENT_SOURCE_DIR}/src/${TNAME}.cpp"
                 "${CMAKE_CURRENT_SOURCE_DIR}/src/Employee-33.cpp")
-    elseif (${T} STREQUAL "32")
-            add_executable(${TNAME}
-                "${CMAKE_CURRENT_SOURCE_DIR}/src/${TNAME}.cpp"
-                "${CMAKE_CURRENT_SOURCE_DIR}/src/Time-30.cpp")
      else()
             add_executable(${TNAME}
                 "${CMAKE_CURRENT_SOURCE_DIR}/src/${TNAME}.cpp")
