@@ -1,7 +1,0 @@
-[requires]
-fmt/8.1.1
-rapidcsv/8.64
-cereal/1.3.2
-
-[generators]
-cmake
