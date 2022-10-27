@@ -1,0 +1,3 @@
+#pragma once
+#define VERSION_MAJOR @cpp20-arrays_VERSION_MAJOR@
+#define VERSION_MINOR @cpp20-arrays_VERSION_MINOR@
