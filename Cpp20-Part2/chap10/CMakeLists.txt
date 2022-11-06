@@ -1,5 +1,5 @@
 # Define targets
-set(TLIST 03 06 07 10 17 25)
+set(TLIST 03 06 07 10 17 25 33)
 
 # iterate through all targets
 foreach(T IN ITEMS ${TLIST})
@@ -31,6 +31,12 @@ foreach(T IN ITEMS ${TLIST})
             "${CMAKE_CURRENT_SOURCE_DIR}/src/Employee-19.cpp"
             "${CMAKE_CURRENT_SOURCE_DIR}/src/SalariedEmployee-21.cpp"
             "${CMAKE_CURRENT_SOURCE_DIR}/src/CommissionEmployee-23.cpp")
+    elseif (${T} STREQUAL "33")
+             add_executable(${TNAME}
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/${TNAME}.cpp"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/Employee-27.cpp"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/Salaried.cpp"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src/Commission.cpp")
      else()
             add_executable(${TNAME}
                 "${CMAKE_CURRENT_SOURCE_DIR}/src/${TNAME}.cpp")
