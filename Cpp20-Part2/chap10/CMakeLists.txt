@@ -1,5 +1,5 @@
 # Define targets
-set(TLIST 03 06 07 10 17 25 33 40 45)
+set(TLIST 03 06 07 10 17 25 33 40 45 47)
 
 # iterate through all targets
 foreach(T IN ITEMS ${TLIST})
