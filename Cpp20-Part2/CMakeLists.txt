@@ -43,6 +43,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 
 add_subdirectory(chap10)
+add_subdirectory(chap11)
 
 add_custom_target (
     copy-compile-commands ALL
