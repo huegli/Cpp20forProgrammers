@@ -73,5 +73,13 @@ int main() {
     catch (const std::out_of_range& ex) {
         std::cout << fmt::format("An exception occurred: {}\n", ex.what());
     }
+
+    // initialize ints4 with contents of the MyArray returned by
+    // getArrayByValue: print size and contents
+    std::cout << "\nInitialize ints4 with temporary MyArray object\n";
+    MyArray ints4{getArrayByValue()};
+
+    std::cout << fmt::format("\nints4 size: {}\ncontents: ", ints4.size())
+        << ints4;
 }
 
