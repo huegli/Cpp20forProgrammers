@@ -59,6 +59,19 @@ int main() {
 
     // use overloaded subscript operator to create an rvalue
     std::cout << fmt::format("ints1[5] is {}\n\n", ints1[5]);
-    
+
+    // use overloaded subscript operator to create an lvalue
+    std::cout << "Assigning 1000 to ints1[5]\n";
+    ints1[5] = 1000;
+    std::cout << "ints1: " << ints1;
+
+    // attempt to use out-of-range subscript
+    try {
+        std::cout << "\n\nAttempt to assign 1000 to inst1[15]\n";
+        ints1[15] = 1000; // ERROR: subscript out of range
+    }
+    catch (const std::out_of_range& ex) {
+        std::cout << fmt::format("An exception occurred: {}\n", ex.what());
+    }
 }
 
