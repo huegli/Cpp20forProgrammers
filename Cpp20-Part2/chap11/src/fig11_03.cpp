@@ -1,5 +1,6 @@
 // fig11_03.cpp
 // MyArray class test program
+#include <fmt/core.h>
 #include <fmt/format.h>
 #include <iostream>
 #include <stdexcept>
@@ -81,5 +82,24 @@ int main() {
 
     std::cout << fmt::format("\nints4 size: {}\ncontents: ", ints4.size())
         << ints4;
+
+    // convert ints4 to an rvalue reference with std::move and
+    // use the result to initialize MyArray ints5
+    std::cout << "\n\nInitialize ints5 with result of std::move(ints4)\n";
+    MyArray ints5{std::move(ints4)}; // invokes move constructor
+
+    std::cout << fmt::format("\nints5 size: {}\ncontents: ", ints5.size())
+        << ints5
+        << fmt::format("\n\nSize of ints4 is now: {}", ints4.size());
+
+    // convert ints4 to an rvalue reference with std::move and
+    // use the result to initialize MyArray ints5
+    std::cout << "\n\nMove ints5 into ints4 via move assignment\n";
+    ints4 = std::move(ints5); // invokes move assignment
+    
+    std::cout << fmt::format("\nints4 size: {}\ncontents: ", ints4.size())
+        << ints4
+        << fmt::format("\n\nSize of ints5 is now: {}", ints5.size());
+
 }
 
