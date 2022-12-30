@@ -124,7 +124,14 @@ const int& MyArray::operator[](size_t index) const {
    return m_ptr[index]; // returns copy of this element
 }
 
-
+// preincrement evory element, then return updated MyArray
+MyArray& MyArray::operator++() {
+   // use a span and for_each to increment every element
+   const std::span<int> items{m_ptr.get(), m_size};
+   std::for_each(std::begin(items), std::end(items),
+         [](auto& item){++item;});
+   return *this;
+}
 
 // overloaded input operator for class MyArray
 // inputs values for entire MyArray

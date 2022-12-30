@@ -38,6 +38,12 @@ public:
     // subscript operator for const objects returns non-modifiable lvalue
     const int& operator[](size_t index) const;
 
+    // convert MyArray to a bool value: true if non-empty; false if empty
+    explicit operator bool() const noexcept {return size() != 0;}
+
+    // preincrement every element, then return updated MyArray
+    MyArray& operator++();
+
 private:
     size_t m_size{0}; // pointer-based array size
     std::unique_ptr<int[]> m_ptr; // smart pointer to integer array

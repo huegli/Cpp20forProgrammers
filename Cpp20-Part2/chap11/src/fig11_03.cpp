@@ -4,6 +4,7 @@
 #include <fmt/format.h>
 #include <iostream>
 #include <stdexcept>
+#include <type_traits>
 #include <utility>
 #include "MyArray.h"
 
@@ -100,6 +101,18 @@ int main() {
     std::cout << fmt::format("\nints4 size: {}\ncontents: ", ints4.size())
         << ints4
         << fmt::format("\n\nSize of ints5 is now: {}", ints5.size());
+
+    // check if ints3 is empty by contextually converting it to a bool
+    if (ints5) {
+        std::cout << "\n\nints5 contains elements\n";
+    }
+    else {
+        std::cout << "\n\nints5 is empty\n";
+    }
+
+    // add one to every element of ints4 using preincrement
+    std::cout << "\nints4: " << ints4;
+    std::cout << "\npreincrementing ints4: " << ++ints4;
 
 }
 
